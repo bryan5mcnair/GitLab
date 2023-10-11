@@ -46,12 +46,16 @@ git checkout test
 git merge top_N
 ```
 
+Git would try to merge the commits in top_N to test branch.
+
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
 ```
 git checkout top_ten
 git merge test
 ```
+
+There would be no additional changes since top_ten was branch from test, so no merge would happen.
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -60,3 +64,5 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+
+Git would try to rebase and merge the changes from top_ten and top_N. There might be a conflict since the same things were changed between the branches.
